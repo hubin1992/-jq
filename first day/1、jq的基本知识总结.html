@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>	jq的基础知识总结</title>
+    </head>
+    <body>
+    	<div id="box"></div>
+    	<script src="../jquery.js"></script>
+    	<script>
+    		//window.onload和jQuery(document).ready(function($){})的区别;
+    		//window.onload只能用一次，	jQuery(document).ready(function($){})可以用多此
+    		//onload是等所有的元素加载完成例如：标签、图片、音频、视频； 而是jQuery(document).ready(function($) {});值需要dom结构加载完成即可；
+    		
+
+    		////////////////////////////////////////////////////////////////
+    		
+    		//js和jq相互转换
+    		//1、用$获取的元素，不能用原生js的方法，会产生冲突。同理用原生js获取的方法也不能jq的方法
+    		
+    		//例如
+    		
+    		var box=document.getElementById("box");
+    		box.hide();
+
+
+    	</script>
+    </body>
+</html>

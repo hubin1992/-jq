@@ -1,0 +1,55 @@
+//jq中的选择器一共分为4类
+//1、基本选择器
+#id .class  element    群组选择器：(element,element,element)   *通配符
+
+//2、层次选择器
+后代选择器(element element)    子带选择器：element>child    当前元素的下一个弟弟：element+element（next）   当前元素后面的所有弟弟：element~element（nextAll）
+
+//3、过滤选择器
+//基本过滤选择器
+:first  :last   :not   :odd  :even   :eq()选取第几个元素，索引从0 开始    :gt()大于索引 :lt()小于当前索引   :animated(正在执行的动画)   :header（所有标题标签）
+。
+//内容过滤选择器
+:contains("text")---》选择含有内容为text的元素
+例如：div:contains("我").css("background","red")
+:empty  空选择器
+例如：div:empty 里面不包含任何东西
+:parent 只要不是空元素都能选中和:empty相反
+:has(selector) 选择含有has里面有的元素的元素（必须是元素）
+例如: div:has(p)  选择div中包含标签为p的元素
+
+//可见性过滤选择器
+:hidden 选取不可见的元素
+:visible  选取可见的元素
+
+//属性过滤选择器
+[attribute]  例如:div[id]  选择有id
+[attribute=value] 例如 div[title=img]
+[attribute!=value] 例如 div[title!=img]title的属性值不等于img
+[attribute^=value] 例如 div[title^=img]title的属性值以img开头的
+[attribute$=value] 例如 div[title$=img]title的属性值以img结尾的
+[attribute*=value] 例如 div[title*=img]  选取所有元素的title值是img的元素
+
+//子代元素过滤选择器
+:nth-child()
+:last-child()
+:first-child()
+:only-child()--->如果某个元素中有且只有一个元素标签，并且元素标签和child()中的相匹配才会被选中
+
+//表单过滤选择器
+:enabled
+:disabled
+:checked
+:selected
+
+
+//4、表单选择器
+:input  选取所有的type类型的标签元素例如  $(:input)就能选取到button、checked等
+:text  选取所有的单行文本框
+:radio 选取所有的单个选择
+：checkbox 选取所有多选框
+:submit 所有提交按钮
+:button 所有的确定按钮
+:reset  所有的重置按钮
+:file 所有的上传按钮
+

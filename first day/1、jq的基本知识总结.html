@@ -20,8 +20,19 @@
     		
     		//例如
     		
-    		var box=document.getElementById("box");
-    		box.hide();
+    		/*var box=document.getElementById("box");
+    		box.hide();//box.hide()is not a function*/
+
+            /////////////////////////////////////
+
+            /*var box=document.getElementById("box");
+            var $box=$(box);//普通的对象转换为jq对象*/
+
+
+            var $box=$("#box");
+            var box=$box[0];//jq对象转换为普通的对象；
+
+
 
 
     	</script>

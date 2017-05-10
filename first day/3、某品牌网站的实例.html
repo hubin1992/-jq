@@ -12,7 +12,38 @@
             list-style: none;
         }
         a{
+            color: #000;
             text-decoration: none;
+        }
+        .clear:after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+        #list{
+            width: 300px;
+        }
+        #list li{
+            width: 100px;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+        }
+        #list li a{
+            display: block;
+            text-align: center;
+        }
+        #btn{
+            display: block;
+            width: 100px;
+            height: 35px;
+            line-height:35px;
+            text-align: center;
+            margin-left: 100px;
+            border: 1px solid darkgoldenrod;
+        }
+        .heightLight{
+            background:coral;
         }
 
 
@@ -20,7 +51,7 @@
 </head>
 <body>
 <div id="wrap">
-    <ul id="list">
+    <ul id="list" class="clear">
         <li><a href="#">索尼</a></li>
         <li><a href="#">三星</a></li>
         <li><a href="#">尼康</a></li>
@@ -35,7 +66,42 @@
         <li><a href="#">对方</a></li>
         <li><a href="#">发到</a></li>
     </ul>
-    <a href="###">精简模式</a>
+    <a href="###" id="btn">精简模式</a>
+    <script src="../jquery.js"></script>
+    <script>
+        //需求后五个隐藏的  当我们点击的时候，判断这后面的品牌是否是隐藏，如果隐藏那显示，如果显示那隐藏
+
+        var fiveLast=$("#list li:gt(5)");
+        fiveLast.hide();
+
+        //让品牌高亮显示 *****filter筛选，符合条件的
+        $("#list>li").filter(":contains('佳能'),:contains('尼康'),:contains('索尼')").addClass("heightLight");
+
+        //获取我们的按钮
+        //console.log(fiveLast.is(":visible"))?返回的是false
+        var $btn=$("#btn");
+        /*$btn.click(function(){
+            if(fiveLast.is(":visible")){
+                $(this).html("精简模式");
+                $("#list>li").filter(":contains('佳能'),:contains('尼康'),:contains('索尼')").addClass("heightLight");
+                fiveLast.hide();
+            }else {
+                $(this).html("显示全部品牌");
+                $("ul li").removeClass("heightLight")
+                fiveLast.show();
+            }
+        })*/
+        $btn.toggle(function(){
+            $(this).html("显示全部品牌");
+            $("ul li").removeClass("heightLight")
+            fiveLast.show();
+        },function(){
+            $(this).html("精简模式");
+            $("#list>li").filter(":contains('佳能'),:contains('尼康'),:contains('索尼')").addClass("heightLight");
+            fiveLast.hide();
+        })
+
+    </script>
 </div>
 </body>
 </html>

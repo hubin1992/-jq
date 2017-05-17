@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #000;
+            margin-right: 10px;
+            display: block;
+            float: left;
+            margin-top: 5000px;
+            margin-bottom: 1000px;
+        }
+
+
+        #ownTitle{
+            position: absolute;
+            font-size: 12px;
+            padding: 2px;
+            text-align: center;
+            border: 1px solid #ccc;
+            background: #fcfcfc;
+            border-radius:5px ;
+
+        }
+    </style>
+    <script src="../jquery.js"></script>
+    <script>
+
+       $(function(){
+           $("a.tip").mouseover(function(e){
+               var x=10;
+               var y=10;
+               //创建一个div
+               this.myTitle=this.title;
+               this.title="";
+               var oDiv="<div id='ownTitle'>"+this.myTitle+"</div>";
+               $("body").append(oDiv);
+               $("#ownTitle").css({
+                   "top": x+e.pageY+"px",
+                   "left":y+e.pageX+"px"
+               })
+
+
+
+           }).mousemove(function(e){
+               var x=10;
+               var y=10;
+               $("#ownTitle").css({
+                   "top":x+e.pageY+"px",
+                   "left":y+e.pageX+"px"
+               })
+           }).mouseout(function(e){
+                $("#ownTitle").remove();
+               this.title=this.myTitle;
+           })
+       })
+
+
+
+    </script>
+</head>
+<body>
+<a class="tip" href="javascript:;" title="我是第1个title">1111111111</a>
+<a class="tip" href="javascript:;" title="我是第2个title">2222222222</a>
+<a href="javascript:;" title="我是第3个title">3333333333</a>
+<a href="javascript:;" title="我是第4个title">4444444444</a>
+</body>
+</html>

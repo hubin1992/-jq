@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<p title="aa" class="a">pppppp</p>
+<ul class="list">
+    <li title="1"><em>em</em>11111</li>
+    <li title="1">22222</li>
+</ul>-->
+
+<ul>
+<li><strong>list</strong> item 1 - one strong tag</li>
+<li><strong>list</strong> item <strong>2</strong> -
+    two <span>strong tags</span></li>
+<li>list item 3</li>
+<li>list item 4</li>
+<li>list item 5</li>
+<li>list item 6</li>
+</ul>
+<script src="../jquery.js"></script>
+<script>
+    //        var $list=$(".list");
+    //        //创建一个新元素
+    //        var $li1=$("<li>3333</li>");
+    //        //添加元素
+    //        $list.append($li1);//添加到list内部最末尾的位置
+    //        $("<em>em</em>").appendTo($li1);//添加到元素内部末尾的位置；
+    //        $list.prepend("<li>00000</li>");//添加到内部的前面；
+    //        $("<em>en</em>").prependTo($li1);//添加到li的最前面的位置
+    //
+    //        $list.after("<p>我在ul的最后面</p>");  //ul的上面
+    //        $list.before("<p>我在ul的最前面</p>"); //ul的下面
+    //        $("<p>begin</p>").insertBefore($list);
+    //        $("<p>end</p>").insertAfter($list);
+    //
+    //
+    //        $(".list>li").eq(1).clone().prependTo($list);//克隆clone里面有两个参数（true/false）true克隆所有的行为，false仅仅是克隆元素，不包括行为；
+    //        //$(".list>li").eq(0).remove();//移除
+    //        $(".list>li").eq(2).empty();//清空内部的元素包括内容和标签
+
+    //获取属性
+    //console.log($(".a").attr("title"));//获取
+    //console.log($(".a").attr("title","bb"));//设置title属性，如果没有就是添加，有就是修改
+    /*$(".a").attr({
+     "aa":"11",   批量设置属性
+     "bb":"22"
+     })*/
+
+
+    //addClass、removeClass、hasClass
+
+    //html() text()   相当于innerHTML和innerText
+
+    //val() 方法解析
+
+    //children()获取子元素
+    //next()/nextAll() 获取下一个弟弟
+    //pre()/preAll() 获取上一个哥哥
+    //parent() 获取父亲节点
+    //parents() 例如 $(span).parents(p); 集合；
+    //siblings 获取所有的兄弟节点
+    //find 查找
+    //$("ul").find("li>em").parent().css("background","red")
+
+    //$("ul>li").filter("[title=1]").css("background","red")
+    //offset().top /offset().left
+    //position()
+    //scrollTop、scrollLeft、  都可以设置和获取
+    //css()设置获取
+    $("li").filter(function(index){
+        return $("strong",this).length===1;
+        //this 代表的是li，li里面包含strong的个数
+    }).css("background","red");
+
+
+    console.log($("li").filter(function(){
+        //return $("strong",this).length===1
+        return $("strong",this)
+    }))
+
+</script>
+</body>
+</html>

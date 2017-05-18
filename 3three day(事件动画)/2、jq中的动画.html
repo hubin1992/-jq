@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq中的动画</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            /* display: none;*/
+            opacity: 1;
+
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<input type="button" value="点击">
+<script src="../jquery.js"></script>
+<script>
+    //hide(),show()  显示和隐藏  (fast/normal/自定的时间)
+    //fadeIn(渐现)、fadeOut(渐隐) 改变透明度
+    //slideUp() slideDown()   下拉显示，上啦隐藏
+    //    $(":button").on("click", function () {
+    //        var $box = $("#box");
+    //        if ($box.is(":visible")) {
+    //            $box.slideUp(1000)
+    //        }else {
+    //            $box.slideDown(1000)
+    //    }});
+
+    //////////////////   自定义动画   ////////////////////////////////////
+    //    animate({},speed,callBack)
+    // stop()停止当前动画，如果下面会有动画会接着运行，stop(true),结束当前动画，并且到达动画完成的状态，stop(true,true)结束当前动画，并且清楚所有动画队列
+</script>
+</body>
+</html>

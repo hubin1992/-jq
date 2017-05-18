@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        /** {*/
+            /*margin: 0;*/
+            /*padding: 0;*/
+            /*user-select: none;*/
+        /*}*/
+
+        /*#panel {*/
+            /*width: 500px;*/
+            /*margin: 100px auto;*/
+            /*border: 1px solid red;*/
+        /*}*/
+
+        /*.head {*/
+            /*text-align: center;*/
+            /*height: 26px;*/
+            /*line-height: 26px;*/
+            /*font-size: 14px;*/
+            /*cursor: pointer;*/
+        /*}*/
+
+        /*#panel p {*/
+            /*text-indent: 1rem;*/
+            /*word-spacing: 4px;*/
+            /*display: none;*/
+        /*}*/
+
+        /*.lightHeight {*/
+            /*background: #ccc;*/
+        /*}*/
+
+        .title{
+            width: 500px;
+            height: 30px;
+            text-align: center;
+            margin: 100px auto 0;
+            cursor: pointer;
+
+        }
+        .container{
+            width: 500px;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+<body>
+<h3 class="title" title="head">点击</h3>
+<div class="container"></div>
+<input type="button" value="点击清除.p">
+<!--<input type="button" value="点我" class="btn">-->
+<!--
+<div id="panel">
+    <h5 class="head">这是标题</h5>
+    <p>
+        1234234kldajfalkfjasdf dsfklasfjls; fs;kd fsdf aslf;df aslfkjs ldfaks fsf asl;k fjsfk jalsdk;f jsdlkf k ;f;dks f flkf asdkfl slf; jsdfjasfo8uqroiewurovjnalkjfalsfj;f jasdkfj alsf djadsl fjalsd fa ;sf as f lld; fd af dl ffk k fl kf akl flfjalkfsdjalsdfjisdofjlsadfjasdlfj
+    </p>
+    </div>
+-->
+<script src="../jquery.js"></script>
+<script>
+    //jq中的事件
+    //    bind(type,[data],fn)----> unbind(type,fn)复杂绑定事件方法
+    /* $("#panel .head").bind("click",function(e){
+     var $op=$(this).next();
+     if($op.is(":visible")){
+     $op.hide();
+     $(this).removeClass("lightHeight")
+     }else {
+     $op.show();
+     $(this).addClass("lightHeight")
+
+     }
+     });*/
+
+    //jq中提供一些简单事件绑定   mouseover,mouseroutr
+    //两个合成事件   划过hover(function(){},function(){})   点击事件toggle(function(){},function(){})
+    /*$("#panel").hover(function(){
+     $(".head").next().show();
+     $(".head").addClass("lightHeight")
+     },function(){
+
+     $(".head").next().hide();
+     $(".head").removeClass("lightHeight")
+     })*/
+
+
+    //如果我们只执行一次绑定的方法  可以用one()方法,点击之后就只能执行一次，然后在也没有作用了；
+
+
+    //////////////////////////  事件的问题   ///////////////////////////////////////
+    //jq阻止事件的冒泡 event.stoPropagation()        e.cancelable=true
+    //jq阻止事件的默认行为 event.preventDefault();   e.preventDefault||returnValue false
+    //return false  阻止默认事件和冒泡
+    //event.target() 事件源
+    //event.pageX // event.pageY  获取距离页面的x周y周的坐标；
+
+
+    ////////////////// 模拟操作 /////////////////
+    //trigger
+    //当dom加载完成后，会自动执行trigger里面的事件，而不用手动去触发
+    //同时还可以触发自定义事件；
+    //trigger(type,[data]);
+    //    $(".btn").one("myclick",function(e,a,b){
+    //        $(this).css("background","red");
+    //        alert(a+b)
+    //    });
+    //    $(".btn").trigger("myclick",["我是","自定义事件"]);//DOM 加载完成会自动执行click事件
+
+
+    ///////////  命名空间   ///////////////////
+    //所谓的命名空间，就是一个闭包，保护内部东西不受外边的影响，而且我们绑定的每一个事件，可以为其加一个标示(.d)，如果我们想移除其中不用的事件的时候，可以直接用unbind("标示")来消除；
+    $(function(){
+        var $title=$(".title");
+        $title.bind("click.d",function(event){
+            $(".container").append("<div>click.d</div>")
+        });
+        $title.bind("mouseover.d",function(event){
+            $(".container").append("<div>mouseover.d</div>")
+        });
+        $title.bind("dblclick",function(event){
+            $(".container").append("<div>dblclick</div>")
+        });
+        //  清楚.d标记的事件，而没有被标记的的还是不影响
+        $("[type=button]").click(function(){
+            $title.unbind(".d")
+        })
+    });
+
+
+
+</script>
+</body>
+</html>

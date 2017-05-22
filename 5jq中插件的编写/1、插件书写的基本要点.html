@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
+    <title>插件书写的基本还要点</title>
+</head>
+<body>
+<script>
+    //1.所有对象的方法，都应该附加在$.fn上，，然而全局方法应该添加在jQuery本身上
+    //2.在插件内部，this指向的是通过选择器获取到的对象，而不像一般方法，例如click（），内部this指向是DOM元素
+    //3.可以通过each(data,index,item) 来遍历所有元素
+    //4.所有的方法和插件都应该用；来结尾  防止压缩的时候出现混乱
+    //5.插件返回的应该是一个jq对象，方便以后用来链式写法
+    //6.避免使用$来替代jQuery别名，当然也可以用闭包来解决这个问题；
+
+
+
+
+</script>
+</body>
+</html>

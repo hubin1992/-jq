@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    $.ajax({
+        url:"data",
+        type:"get",
+        dataType:"json",
+        data:"null",
+        timeout:1000,//超过1s没有请求到数据就报错
+        cache:false,//避免走缓存
+        success:function(data){
+            console.log(data)
+        },
+        error:function(){
+
+        }
+    });
+
+    /*$.ajax({
+     url:"http://matchweb.sports.qq.com/kbs/calendar?columnId=100000",
+     type:"get",
+     dataType:"jsonp", //修改成jsonp就是跨域请求
+     jsonp:"fn",//自定义函数名；
+     success:function(data){
+     console.log(data)
+     }
+     })*/
+
+
+
+
+</script>
+
+</body>
+</html>

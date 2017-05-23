@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
+    <title></title>
+</head>
+<body>
+<div class="box">
+    <div>1111</div>
+</div>
+<div class="box">2222</div>
+<script src="../jquery.js"></script>
+<script>
+    //html()
+    //获取（只能获取到第一个）
+    //        var $inner=$(".box").html();
+    //        console.log($inner);  //<div>111</div>
+    //        //修改 （可以修改多个）
+    //        $(".box").html("修改后")
+
+    //text()可以获取所有符合的，只能获取到text内容
+    console.log($(".box").text()) ;   //111  222
+
+    //val() 只能获取表单，如果有多个符合条件只能获取到第一个
+</script>
+</body>
+</html>

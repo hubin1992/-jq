@@ -51,20 +51,15 @@
 
 
     //addClass、removeClass、hasClass
-
-    //html() text()   相当于innerHTML和innerText
-
-    //val() 方法解析
-
     //children()获取子元素
     //next()/nextAll() 获取下一个弟弟
     //pre()/preAll() 获取上一个哥哥
     //parent() 获取父亲节点
-    //parents() 例如 $(span).parents(p); 集合；
+    //parents() 例如 $(span).parents(p); 集合一直找到祖先，不仅仅是父亲；
+    //closet() 和parents差不多，但是他只会找到一个符合的
     //siblings 获取所有的兄弟节点
-    //find 查找
+    //find 查找 和childern方法一样，只是children方法只找到儿子辈，find找到的子子孙孙
     //$("ul").find("li>em").parent().css("background","red")
-
     //$("ul>li").filter("[title=1]").css("background","red")
     //offset().top /offset().left
     //position()
@@ -78,11 +73,19 @@
         //this 代表的是li，li里面包含strong的个数
     }).css("background","red");
 
+    //$().each(index,item,function(){})  //循环dom元素
+    //$.each(data,function(){})
 
-    console.log($("li").filter(function(){
-        //return $("strong",this).length===1
-        return $("strong",this)
-    }))
+    //查找数组中的索引$.inArray("value",array,[fromIndex])   fromIndex：定义从第几个索引开始    value是我们要查找的值
+    // 返回的值和indexof一样有的时候 返回的是索引，没有返回的是-1
+
+    //  JQ去空格神器
+    //$.trim()---->去除字符串两边的空格
+    var str="    1111 ";
+    str= $.trim("(str)");
+    console.log(str)
+
+
 
 </script>
 </body>

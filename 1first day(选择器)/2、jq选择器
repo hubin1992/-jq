@@ -1,6 +1,6 @@
 //jq中的选择器一共分为4类
 //1、基本选择器
-#id .class  element    群组选择器：(element,element,element)   *通配符
+#id .class  element    群组选择器：(element,element, )   *通配符
 
 //2、层次选择器
 后代选择器(element element)    子带选择器：element>child    当前元素的下一个弟弟：element+element（next）   当前元素后面的所有弟弟：element~element（nextAll）
@@ -53,3 +53,22 @@
 :reset  所有的重置按钮
 :file 所有的上传按钮
 
+
+
+
+ attr("属性")  / attr("属性"，"值")---》注意：如果之前有就是修改，如果没有就是设置或者
+ removerAttr()
+ html() text() val()
+
+
+ $().index()     如果index中不传递任何的参数 那我们获取的就是在同辈之间的索引位置，如果传递了值，就只会获取符合条件的索引位置
+ 例如：
+    <ul>
+        <a></a>
+        <li></li>
+        <li id="li2"></li>
+        <li></li>
+        <li></li>
+    </ul>
+    $(li).index() 返回的结果是1
+    $(li).index($("$li2"))  返回的结果也是1

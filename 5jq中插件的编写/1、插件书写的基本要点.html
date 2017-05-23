@@ -5,15 +5,15 @@
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
     <title>插件书写的基本还要点</title>
     <style>
-        #box{
-            width: 100px;
-            height: 100px;
-            border: 1px solid red;
-        }
+
     </style>
 </head>
 <body>
-<div id="box"></div>
+<ul>
+    <li>首页</li>
+    <li>prev</li>
+    <li>next</li>
+</ul>
 <script src="../jquery.js"></script>
 <script>
     //1.所有对象的方法，都应该附加在$.fn上，，然而全局方法应该添加在jQuery本身上
@@ -25,8 +25,26 @@
 
 
     //编写插件的两种方式
-    //1   $.fn.extend(jq对象本身上扩展)---》经常用这种
+    //1   $.fn.extend(jq对象本身上扩展)---》经常用这种,我们看到的也是在这个基础上来封装的插件
+    (function ($) {
+        $.fn.extend({
+            ownSet: function (options) {
+                var defaults = {
+                    "color": "blue",
+                    "fontSize": 14
+                };
+                options = $.extend({}, defaults, options);
+                return this.css({
+                    "color": options.color,
+                    "fontSize": options.fontSize
+                })
+            }
+        })
+    })(jQuery);
 
+    $("li").click(function () {
+        $(this).ownSet({"color":"red"})
+    });
 
     //2   $.extend(jq原型上扩展)    他不仅可以在jq原型上扩展还可以在扩展已有的对象；
     //例如：
@@ -47,18 +65,16 @@
     //    }
     //如果调用的时候我们传递了就修改不传递就用默认的；
     //我们使用的时候 用的是自执行函数 $(){}不是这个,因为jq中没有这个
-    (function($){
-        $.extend({
-            sayHello:function(name){
-                console.log("hello"+(name?name:"lili")+"!")
-            }
-        })
-    }) (jQuery);
+    /* (function ($) {
+     $.extend({
+     sayHello: function (name) {
+     console.log("hello" + (name ? name : "lili") + "!")
+     }
+     })
+     })(jQuery);
 
-    jQuery.sayHello();
-    jQuery.sayHello("yaya")
-
-
+     jQuery.sayHello();
+     jQuery.sayHello("yaya")*/
 
 
 </script>

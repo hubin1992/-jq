@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1ec1114-bf82-49aa-bae0-cdbbd1c96e51" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1first day(选择器)/2-1 html、text、val.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/3three day(事件动画)/3、jq动画实例.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1first day(选择器)/2、jq选择器" afterPath="$PROJECT_DIR$/1first day(选择器)/2、jq选择器" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2two day（DOM）/1.dom增加删除修改.html" afterPath="$PROJECT_DIR$/2two day（DOM）/1.dom增加删除修改.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3three day(事件动画)/1、jq中的事件.html" afterPath="$PROJECT_DIR$/3three day(事件动画)/1、jq中的事件.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3three day(事件动画)/2、jq中的动画.html" afterPath="$PROJECT_DIR$/3three day(事件动画)/2、jq中的动画.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5jq中插件的编写/1、插件书写的基本要点.html" afterPath="$PROJECT_DIR$/5jq中插件的编写/1、插件书写的基本要点.html" />
     </list>
     <ignored path="learn jq.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,28 +22,7 @@
     <favorites_list name="learn jq" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ajax和jsonp.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/4ajax和jsonp的应用/ajax和jsonp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12676056">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="1、插件书写的基本要点.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/5jq中插件的编写/1、插件书写的基本要点.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.0">
-              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -156,10 +128,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learn jq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="-jq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,11 +273,29 @@
       <option name="project" value="LOCAL" />
       <updated>1495446733353</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="插件没写">
+      <created>1495530792414</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1495530792414</updated>
+    </task>
+    <task id="LOCAL-00010" summary="$.extend({})全局的写完了">
+      <created>1495533850668</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1495533850668</updated>
+    </task>
+    <task id="LOCAL-00011" summary="基于jq的也写完了，还差一个面向对象">
+      <created>1495535334893</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1495535334893</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -329,18 +329,28 @@
     <MESSAGE value="jq的ajax和jsonp&#10;" />
     <MESSAGE value="&#10;插件的总结" />
     <MESSAGE value="&#10;$.ajax()的详解" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;$.ajax()的详解" />
+    <MESSAGE value="插件没写" />
+    <MESSAGE value="$.extend({})全局的写完了" />
+    <MESSAGE value="基于jq的也写完了，还差一个面向对象" />
+    <option name="LAST_COMMIT_MESSAGE" value="基于jq的也写完了，还差一个面向对象" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/5jq中插件的编写/1、插件书写的基本要点.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/4ajax和jsonp的应用/ajax和jsonp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -424,22 +434,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0774648">
           <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5jq中插件的编写/1、插件书写的基本要点.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.0">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/4ajax和jsonp的应用/ajax和jsonp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12676056">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.19014084">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5jq中插件的编写/1、插件书写的基本要点.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2535211">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding />
         </state>
       </provider>
